@@ -59,7 +59,7 @@ class Dog
     sql = "SELECT * FROM dogs WHERE name = ?"
     dog_attrs = DB[:conn].execute(sql, name)[0]
     dog = self.new({:name => dog_attrs[1], :breed => dog_attrs[2])
-    binding.pry
+    dog.id = dog_attrs[0]
     dog
   end
   
