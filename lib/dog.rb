@@ -59,7 +59,7 @@ class Dog
     sql = "SELECT * FROM dogs WHERE name = ?"
     dog_attrs = DB[:conn].execute(sql, name).flatten
     dog = create(id: dog_attrs[0], name: dog_attrs[1], breed: dog_attrs[2])
-    binding.pru
+    binding.pry
     dog
   end
   
